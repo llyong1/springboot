@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Signin Template for Bootstrap</title>
+    <!-- Bootstrap core CSS -->
+    <link data-th-href="@{/asserts/css/bootstrap.min.css}" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <!--<link href="asserts/css/signin.css" rel="stylesheet">-->
+</head>
+
+
+<body class="text-center">
+    <input id="ctx" name="ctx" th:value="${#ctx}" style="width: 100%"/>
+    <input th:value="${#httpServletRequest.getScheme()}" style="width: 100%"/>
+    <input th:value="${#httpServletRequest.getServerName()}" style="width: 100%"/>
+    <input th:value="${#request.getServerPort()}" style="width: 100%"/>
+    <input th:value="${#request.getContextPath()}" style="width: 100%"/>
+    <input th:value="${#httpServletRequest}" style="width: 100%"/>
+    <input th:value="${#request}" style="width: 100%"/>
+    <br/>
+用户页面
+</body>
+</html>

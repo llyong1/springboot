@@ -1,0 +1,11 @@
+server:
+  port: 8086
+
+shiro:
+  loginUrl: /login
+  successUrl: /index
+  unauthorizedUrl: /error
+  pathDefinitions:
+    - /login = anon
+    - /logout = logout
+    - /** = authc

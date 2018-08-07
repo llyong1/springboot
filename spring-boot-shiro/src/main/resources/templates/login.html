@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <link href="/static/jquery.min.js">
+</head>
+<body>
+<div style="width: 100%;text-align: center;border: green;">
+    <label>这是一个登录页面</label>
+    <form action="/login" method="post">
+        用户名：<input id="username" name="username" /><br/>
+        密码：<input id="password" name="password" /><br/>
+        <span th:text="${msg}"></span>
+        <input type="submit"/>
+    </form>
+</div>
+</body>
+</html>

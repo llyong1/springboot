@@ -1,0 +1,16 @@
+server:
+  port: 8081
+
+
+person:
+  name: zhangsan
+  age: 34
+  boss: true
+  birth: 1993/05/12
+  maps: {k1: beijing, k2: shanghai}
+  lists:
+    - lisi
+    - zhaoliu
+  dog:
+    name: 小狗
+    age: 12
