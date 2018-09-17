@@ -36,7 +36,8 @@ public class ShiroConfiguration {
     public Realm realm () {
         HashedCredentialsMatcher matcher = new HashedCredentialsMatcher();
         matcher.setHashAlgorithmName(Sha256Hash.ALGORITHM_NAME);
-//        matcher.setStoredCredentialsHexEncoded(false);
+        //storedCredentialsHexEncoded默认是true，此时用的是密码加密用的是Hex编码；false时用Base64编码
+//        matcher.setStoredCredentialsHexEncoded(true);
         matcher.setHashIterations(1024);
 
         AuthorizingRealm authorizingRealm = new AuthorizingRealm() {

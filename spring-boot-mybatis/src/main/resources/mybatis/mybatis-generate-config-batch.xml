@@ -5,7 +5,7 @@
 
 <generatorConfiguration>
 
-    <properties resource="mybatis-generator.properties" />
+    <properties resource="mybatis-generator-batch.properties" />
 
     <!--"context" 的内容必须匹配顺序
         "(property*,plugin*,commentGenerator?,(connectionFactory|jdbcConnection),javaTypeResolver?,javaModelGenerator,

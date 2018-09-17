@@ -1,0 +1,39 @@
+server:
+    port: 8085
+
+spring:
+    datasource:
+#        name: test
+#        url: jdbc:mysql://127.0.0.1:3306/world
+        url: jdbc:mysql://localhost:3306/db_pms?useUnicode=true&characterEncoding=utf8&useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+        username: root
+        password: root
+        # 使用druid数据源
+#        type: com.alibaba.druid.pool.DruidDataSource
+        # mysql-connector-java 6.0以下的配置
+#        driver-class-name: com.mysql.jdbc.Driver
+        # mysql-connector-java 6.0 以上的配置
+        driver-class-name: com.mysql.cj.jdbc.Driver
+#        filters: stat
+#        maxActive: 20
+#        initialSize: 1
+#        maxWait: 60000
+#        minIdle: 1
+#        timeBetweenEvictionRunsMillis: 60000
+#        minEvictableIdleTimeMillis: 300000
+#        validationQuery: select 'x'
+#        testWhileIdle: true
+#        testOnBorrow: false
+#        testOnReturn: false
+#        poolPreparedStatements: true
+#        maxOpenPreparedStatements: 20
+#mybatis:
+#    mapper-locations: classpath:xmlmappr/**/*Mapper.xml
+#    type-aliases-package: cn.llyong.module.domain
+
+#pagehelper分页插件
+#pagehelper:
+#    helperDialect: mysql
+#    reasonable: true
+#    supportMethodsArguments: true
+#    params: count=countSql

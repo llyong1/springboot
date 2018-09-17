@@ -27,10 +27,10 @@ public class LoginController {
     }
 
     @PostMapping("login")
-    public String login (String username, String password, Model model) {
+    public String login (String username, String password, boolean rememberMe, Model model) {
         try {
             Subject subject = SecurityUtils.getSubject();
-            subject.login(new UsernamePasswordToken(username,password));
+            subject.login(new UsernamePasswordToken(username,password,rememberMe));
             model.addAttribute("m",(String) SecurityUtils.getSubject().getPrincipal());
             return "index";
         } catch (Exception e) {
@@ -47,4 +47,12 @@ public class LoginController {
         model.addAttribute("m",username);
         return "index";
     }
+
+    @RequestMapping("user")
+    public String turnUser (Model model) {
+
+        return "user";
+    }
+
+
 }

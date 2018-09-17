@@ -11,6 +11,7 @@
     <form action="/login" method="post">
         用户名：<input id="username" name="username" /><br/>
         密码：<input id="password" name="password" /><br/>
+        <input type="checkbox" id="rememberMe" name="rememberMe" />记住我<br/>
         <span th:text="${msg}"></span>
         <input type="submit"/>
     </form>
